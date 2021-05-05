@@ -2623,6 +2623,31 @@ class MNPCoin(Coin):
         import quark_hash
         return quark_hash.getPoWHash(header)
 
+class SAPP(Coin):
+    NAME = "SAPP"
+    SHORTNAME = "SAPP"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("022D2563") 
+    XPRV_VERBYTES = bytes.fromhex("0221312B") 
+    GENESIS_HASH = ('39bbb54cf9bd5f0d4881c8eef364cd26' 
+                    '3a663d14d5581a63822963bf1613041b') 
+    P2PKH_VERBYTE = bytes.fromhex("3F")
+    P2SH_VERBYTES = [bytes.fromhex("12")]
+    WIF_BYTE = bytes.fromhex("19")
+    TX_COUNT_HEIGHT = 1000000
+    TX_COUNT = 2000000
+    TX_PER_BLOCK = 4
+    RPC_PORT = 45329
+    PEERS = []
+    SESSIONCLS = DashElectrumX
+    DAEMON = daemon.DashDaemon
+
+    @classmethod
+    def header_hash(cls, header):
+        '''Given a header return the hash.'''
+        import quark_hash
+        return quark_hash.getPoWHash(header)      
+      
 
 class ColossusXT(Coin):
     NAME = "ColossusXT"
