@@ -2629,8 +2629,8 @@ class SAPP(Coin):
     NET = "mainnet"
     XPUB_VERBYTES = bytes.fromhex("022D2563") 
     XPRV_VERBYTES = bytes.fromhex("0221312B") 
-    GENESIS_HASH = ('39bbb54cf9bd5f0d4881c8eef364cd26' 
-                    '3a663d14d5581a63822963bf1613041b') 
+    GENESIS_HASH = ('00000eef0583695d6da23a78bab1c399' 
+                    '62179b80cc4da52f1ff4bad5d690836a') 
     P2PKH_VERBYTE = bytes.fromhex("3F")
     P2SH_VERBYTES = [bytes.fromhex("12")]
     WIF_BYTE = bytes.fromhex("19")
