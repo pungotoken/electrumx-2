@@ -2639,8 +2639,7 @@ class SAPP(Coin):
     TX_PER_BLOCK = 4
     RPC_PORT = 45329
     PEERS = []
-    SESSIONCLS = DashElectrumX
-    DAEMON = daemon.DashDaemon
+    DESERIALIZER = lib_tx.DeserializerPIVX
 
     @classmethod
     def header_hash(cls, header):
